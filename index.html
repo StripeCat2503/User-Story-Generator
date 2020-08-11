@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Story Creater</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h2>Create Your User Stories for SCRUM Project</h2>
+
+        <div class="us-input-container border border-secondary p-5">
+            <div class="form-group">
+                <label for="">Role</label>
+                <input type="text" class="form-control" id="role" required>
+            </div>
+
+            <div class="form-group">
+                <label for="">What you want to do?</label>
+                <input type="text" class="form-control" id="todo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="">Reason</label>
+                <input type="text" class="form-control" id="reason" required>
+            </div>
+
+            <div class="form-group">
+                <button id="createBtn">Create User Story</button>
+            </div>
+        </div>
+
+        <div class="us-list-container border border-secondary p-5">
+            <ul id="usList">
+
+            </ul>
+        </div>
+    </div>
+
+    <script src="user-story.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
