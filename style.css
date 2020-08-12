@@ -6,15 +6,34 @@
     margin: 0;
 }
 
+button{
+    outline: none !important;
+}
+
 h2{
     text-align: center;
     margin: 30px 0 !important;
 }
 
+.btn-clear{
+    background: none;
+    color: red;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    padding: 10px 20px;
+    transition: 0.2s;
+}
+
+.btn-clear:hover{
+    background-color: rgb(212, 206, 206);
+}
+
 .us-input-container{
     position: absolute;
     top: 100px;
-    bottom: 0;
+    bottom: 20px;
     left: 0;
     width: 400px;
 }
@@ -22,10 +41,113 @@ h2{
 .us-list-container{
     position: absolute;
     top: 100px;
-    right: 0;
-    bottom: 0;
+    right: 15px;
+    bottom: 20px;
 
-    width: calc(100vw - 400px);
-    
-    border-left: none !important;
+    width: calc(100vw - 420px);
+    overflow: scroll;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li{
+    margin: 15px 0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+ul li button{
+    opacity: 0;
+    transition: 0.2s;
+}
+
+ul li:hover > button{
+    opacity: 1;
+}
+
+ul li:hover{
+    background-color: rgb(211, 211, 211);
+}
+
+ul li .user-icon{
+    margin-right: 50px;
+    color: rgb(97, 88, 12);
+    font-size: 30px;
+}
+
+.btn-copy{
+    border: none;
+    padding: 5px;
+    color: rgb(75, 73, 73);
+    font-size: 20px;
+    background: none;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+.btn-copy:hover{
+    color: rgb(119, 117, 117);
+    transform: scale(1.5)
+}
+
+.btn-remove{
+    border: none;
+    padding: 5px;
+    color: rgb(224, 73, 73);
+    font-size: 20px;
+    background: none;
+}
+
+.btn-remove:hover{
+    color: rgb(221, 112, 112);
+    transform: scale(1.5)
+}
+
+.preview{
+    color: rgb(211, 211, 211);
+    font-style: italic;
+    font-size: 12px;
+    cursor: text;
+}
+
+.preview:hover{
+    background: none;
+}
+
+.copy-toast .toast-body{
+    background-color: rgb(49, 48, 48);
+    color: white;
+    border-radius: 5px;
+}
+
+.remove-toast .toast-body{
+    background-color: rgb(212, 71, 71);
+    color: white;
+    border-radius: 5px;
+}
+
+input{
+    border-radius: 0 !important;
+    border: 1px solid rgb(48, 165, 87) !important;
+
+}
+
+#createBtn{
+    background-color: rgb(48, 165, 87);
+    border: none;
+    color: white;
+    padding: 20px 10px;
+    display: block;
+    width: 100%;
+    transition: 0.15s;
+}
+
+#createBtn:hover{
+    background-color: rgb(68, 207, 114);
 }

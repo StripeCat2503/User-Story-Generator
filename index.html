@@ -6,28 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Story Creater</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid" id="container">
         <h2>Create Your User Stories for SCRUM Project</h2>
 
-        <div class="us-input-container border border-secondary p-5">
+        <div class="us-input-container border border-primary p-5">
             <div class="form-group">
                 <label for="">Role</label>
-                <input type="text" class="form-control" id="role" required>
+                <input type="text" class="form-control shadow-none" id="role" required>
             </div>
 
             <div class="form-group">
                 <label for="">What you want to do?</label>
-                <input type="text" class="form-control" id="todo" required>
+                <input type="text" class="form-control shadow-none" id="todo" required>
             </div>
 
             <div class="form-group">
                 <label for="">Reason</label>
-                <input type="text" class="form-control" id="reason" required>
+                <input type="text" class="form-control shadow-none" id="reason" required>
             </div>
 
             <div class="form-group">
@@ -35,15 +37,44 @@
             </div>
         </div>
 
-        <div class="us-list-container border border-secondary p-5">
+        <div class="us-list-container border border-primary p-5">
+            <div>
+                <button id="clearBtn" class="btn-clear"><i class="fas fa-times"></i></button>
+            </div>
+            <div style="clear: both;"></div>
             <ul id="usList">
 
             </ul>
         </div>
     </div>
 
+    <!-- Copy Action Notify -->
+    <div class="toast copy-toast" style="position: absolute; bottom: 0; right: 10px;" data-delay="1500">      
+        <div class="toast-body">
+            User Story Copied
+        </div>
+    </div>
+
+    <!-- Remove Action Notify -->
+    <div class="toast remove-toast" style="position: absolute; bottom: 0; right: 10px;" data-delay="1500">      
+        <div class="toast-body">
+            User Story Removed
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
     <script src="user-story.js"></script>
     <script src="app.js"></script>
+
 </body>
 
 </html>
