@@ -16,14 +16,14 @@ createBtn.addEventListener('click', (e) => {
 })
 
 clearBtn.addEventListener('click', () =>{
+    if(userStories.length == 0) return
+
     let result = window.confirm('Are you sure you want to clear all user stories?')
     if(result){
         userStories = []
         updateUsList()
     }
 })
-
-updateUsList()
 
 function addUs() {
     if (role.value && todo.value && reason.value) {
@@ -138,3 +138,6 @@ reason.addEventListener('keyup', (e) => {
         updateUsList()
     }
 })
+
+updateUsList()
+role.focus()
